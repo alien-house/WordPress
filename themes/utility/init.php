@@ -128,7 +128,7 @@ function vertionnone(){
  * フッターWordPressリンクをメールリンクに
  ---------------------------------------------------------------------------*/
 function custom_admin_footer() {
- echo '<a href="mailto:xxx@zzz">hotlineへお問い合わせ</a>';
+ echo '<a href="mailto:xxx@zzz">へお問い合わせ</a>';
  }
 add_filter('admin_footer_text', 'custom_admin_footer');
 
