@@ -1,0 +1,501 @@
+
+/* --------------------------------- */
+/*  サイド
+------------------------------------ */
+.side-module{
+	margin:0 0 20px;
+	h1{
+		background:$color-blue;
+		font-weight:normal;
+		font-size: 1.5rem;
+		margin:0 0 1px;
+		padding:14px 10px;
+		color:$pure-white;
+		a{
+			color:$pure-white;
+		}
+	}
+}
+.side-nav{
+	li{
+		font-weight:normal;
+		margin:0 0 1px;
+		&.current-menu-item{
+			a{
+				color:$color-base;
+				background:$pre-white2;
+			}
+		}
+		a{
+			display:block;
+			padding:14px 10px;
+			background:$color-light-grey6;
+		}
+	}
+}
+.side-bnr{
+	margin:0 0 20px;
+	li{
+		margin:0 0 10px;
+	}
+}
+
+/* --------------------------------- */
+/*  下層ページのあのでかいタイトル(画像はアイキャッチにするか)
+------------------------------------ */
+.main-title{
+	display:table;
+	width:100%;
+	height:400px;
+	color: $pure-white;
+	background: url(../images/expert_main_img.png) no-repeat center center;
+	background-size:cover;
+    @include bder-radius(4px);
+	@include max-screen($breakpoint-tablet) {
+		height:167px;
+	}
+    .main-title-inner{
+		display:table-cell;
+		text-align:center;
+		vertical-align: middle;
+		width:100%;
+		height:100%;
+		padding:0 25px;
+		background: url(../images/dot_bg_white.png) repeat;
+		h1{
+	    	font-size: 3.0rem;
+	    	font-weight: normal;
+	    	padding:5px 0 0;
+			@include max-screen($breakpoint-tablet) {
+	    		font-size: 2.4rem;
+			}
+		}
+		p{
+	    	margin:20px 0 0;
+	    	padding:20px 0 0;
+			display:inline-block;
+			font-size: 1.8rem;
+			font-weight:200;
+			line-height:1.4;
+			border-top: $pure-white solid 1px;
+			@include max-screen($breakpoint-tablet) {
+	    		font-size: 1.5rem;
+		    	margin:15px 0 0;
+		    	padding:15px 0 0;
+			}
+		}
+    }
+}
+
+
+/* --------------------------------- */
+/*  下層ページのタイトル
+------------------------------------ */
+.under-main-title{
+	display:table;
+	width:100%;
+	height:183px;
+	margin:0 0 25px;
+	color: $pure-white;
+	background: url(../images/under_title_bg.gif) no-repeat center center;
+	background-size:cover;
+    @include bder-radius(4px);
+	@include max-screen($breakpoint-tablet) {
+		height:127px;
+	}
+    .under-main-title-inner{
+		display:table-cell;
+		text-align:center;
+		vertical-align: middle;
+		width:100%;
+		height:100%;
+		padding:0 25px;
+	}
+	h1,.under-main-title--title{
+		font-size: 3.0rem;
+		font-weight:normal;
+		margin:30px 0;
+		@include max-screen($breakpoint-tablet) {
+			font-size: 2.4rem;
+		}
+	}
+}
+
+
+/* --------------------------------- */
+/*  
+------------------------------------ */
+.plan-list--under{
+	@extend .plan-list;
+	li{
+		height:180px;
+		@include max-screen($breakpoint-tablet) {
+			height:100px;
+		}
+	}
+}
+.plan-list--misc{
+	@extend .plan-list;
+	li{
+		height:auto;
+		.plan-box{
+			height:180px;
+			@include max-screen($breakpoint-tablet) {
+				height:100px;
+			}
+		}
+	}
+}
+.plan-list--btn{
+	@extend .plan-list;
+	li{
+		@include max-screen($breakpoint-tablet) {
+		}
+	}
+}
+
+/* --------------------------------- */
+/*  留学前のステップ 数字が出てるやつ
+------------------------------------ */
+.step-list{
+	counter-reset:number;
+	margin: 0 0 10px 0;
+	overflow: hidden;
+  	@include bder-radius(4px);
+	li{
+		position:relative;
+		margin: 0;
+		list-style-type:none;
+		@include max-screen($breakpoint-tablet) {
+			&:first-child{
+				&:before{
+					margin-top:18px;
+				}
+			}
+		}
+		&:before{
+			position:absolute;
+			color:$color-blue;
+			top:50%;
+			left:140px;
+			display:inline-block;
+			font-size:3.6rem;
+			font-weight:normal;
+			width: 60px;
+			line-height:60px;
+			border-radius:50px;
+			margin:-30px 0 0;
+			text-align: center;
+			counter-increment: number; 
+			content: counter(number); 
+			background:$pure-white;
+			text-indent: 0;
+			@include max-screen($breakpoint-tablet) {
+				font-size:2.4rem;
+				left:16px;
+				width: 36px;
+				line-height:36px;
+				margin-top:-18px;
+			}
+		}
+		&:nth-child(2n){
+			dt{
+				background:$color-dblue2;
+			}
+			dd{
+				background:$color-light-grey5;
+			}
+		}
+	}
+	dl{
+		display:table;
+		// display:flex;
+  // 		align-items: stretch;
+		width:100%;
+		dt{
+			display:table-cell;
+			color:$pure-white;
+			background:$color-blue;
+			font-weight:normal;
+			width:174px;
+			text-align:center;
+			vertical-align:middle;
+			border-right:$pure-white 4px solid;
+			padding:14px;
+			line-height:1.2;
+			@include max-screen($breakpoint-tablet) {
+				font-size:1.2rem;
+				width:70px;
+			}
+		}
+		dd{
+			display:table-cell;
+			background:$pre-white;
+			width:auto;
+			padding:30px;
+			vertical-align:middle;
+			&:nth-child(2){
+				padding-left:50px;
+			}
+			@include max-screen($breakpoint-tablet) {
+				padding:20px !important;
+			}
+			.step-item_meta{
+				display:flex;
+  				justify-content: space-between;
+				@include max-screen($breakpoint-tablet) {
+    				flex-direction:column;
+				}
+				.btn-step{
+					width:230px;
+					@include max-screen($breakpoint-tablet) {
+						width:100%;
+						margin-top:10px;
+					}
+					a{
+						font-size:1.5rem;
+						font-weight:normal;
+						@include max-screen($breakpoint-tablet) {
+							font-size:1.2rem;
+							padding: 10px;
+						}
+					}
+				}
+			}
+			.step-item_txt{
+				@include max-screen($breakpoint-tablet) {
+					// margin:0 0 10px;
+				}
+				h2{
+					font-size:2.4rem;
+					line-height:1.2;
+					color:$color-blue;
+					font-weight:normal;
+					margin:0;
+					@include max-screen($breakpoint-tablet) {
+						font-size:1.8rem;
+					}
+					& + p{
+						margin-top:10px;
+					}
+				}
+				p{
+					line-height:1.4;
+					margin-bottom:0;
+				}
+			}
+		}
+
+	}
+}
+
+
+/* --------------------------------- */
+/*  留学中について
+------------------------------------ */
+.during-area{
+  text-align:center;
+  h1{
+    margin:0 0 24px;
+  }
+  .during-p{
+    margin:0 0 2.4em;
+	font-size: 2.0rem;
+	line-height:1.4;
+    @include max-screen($breakpoint-tablet) {
+		font-size: 1.8rem;
+    }
+  }
+}
+
+
+
+
+.returning-area{
+  background:url(../images/dot_bg_white.png),url(../images/return_bg.png) no-repeat right bottom;
+  background-size:4px 4px,cover;
+  @include max-screen($breakpoint-tablet) {
+    // background-image:url(../images/dot_bg_white_sp.png);
+  }
+  .returning-txt{
+	color:$pure-white;
+	margin:0 0 50px;
+	h1{
+		margin:0 0 25px;
+	}
+	p{
+		line-height:1.6;
+	}
+	.returning-p{
+	    margin:0 0 2.4em;
+		font-size: 2.0rem;
+		text-align:center;
+		@include max-screen($breakpoint-tablet) {
+			margin-bottom:1em;
+			font-size: 1.8rem;
+		}
+	}
+  }
+  
+}
+
+
+/*====================================================
+ パンくず
+====================================================*/
+.wpcf7-form{
+	font-size: 1.5rem;
+	@include max-screen($breakpoint-tablet) {
+		font-size: 1.4rem;
+	}
+}
+.wpcf7-not-valid-tip{
+	line-height:1.5;
+	padding:0.5% 0;
+}
+.wpcf7-form .wpcf7-response-output {
+    padding: 0.6em 1em;
+}
+
+.form-title{
+	margin:0 0 1.5%;
+	line-height:1.3;
+	label{
+		font-weight:bold;
+	}
+}
+.form-box{
+	margin:1% 0 3%;
+}
+form select, form textarea, 
+form input[type="text"], 
+form input[type="password"], 
+form input[type="search"], 
+form input[type="email"], 
+form input[type="tel"], 
+form input[url] {
+    background: #fff;
+    border: 1px solid $color-bder-blue2;
+    padding: 7px 10px;
+    width: 100%;
+    line-height:1.5;
+	font-size: 1.5rem;
+  	border-radius:$bd-radius;
+}
+form select, 
+form input[type="text"], 
+form input[type="search"], 
+form input[type="email"], 
+form input[type="password"], 
+form input[type="tel"], 
+form input[url] {
+    width: 70%;
+}
+.wpcf7-form-control-wrap {
+    position: relative;
+}
+form select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff url("../images/arrow-down.svg") no-repeat scroll right 10px center;
+    cursor: pointer;
+    text-indent: 0.01px;
+    text-overflow: "";
+}
+.form-select{
+	margin:0 0 0.5em;
+}
+span.wpcf7-list-item {
+    display: inline-block;
+    margin: 0 0 0 1em;
+}
+
+form input[type="checkbox"],
+form input[type="radio"]{
+	margin:6px;
+}
+form textarea {
+	width:70%;
+    height: 200px;
+	@include max-screen($breakpoint-tablet) {
+		width:100%;
+	}
+}
+.width50p{ width:50%; 
+	@include max-screen($breakpoint-tablet) {
+		width:100%;
+	}
+}
+.width30p{ width:30%; 
+	@include max-screen($breakpoint-tablet) {
+		width:100%;
+	}
+}
+
+/*====================================================
+ パンくず
+====================================================*/
+.breadcrumb{
+	margin:0 0 15px;
+	.breadcrumb-list{
+		display:flex;
+		li{
+			padding:0 5px 0 0;
+			font-weight:normal;
+			&.current-crumb{
+				a{
+					color:inherit;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+// .page{
+//   h2{
+//     margin-top: 2em;
+//   }
+//   .page-form{
+//     input[type=text],input[type=email],textarea,select{
+//       @extend .form-control;
+//     }
+//     select{
+//       width: 30%;
+//       display: inline-block;
+//       margin-right: 1%;
+//     }
+//     .wpcf7-list-item{
+//       input{
+//         display: inline;
+//       }
+//     }
+//     input[type=submit]{
+//       @include btn;
+//       padding: 0.5em 2em;
+//     }
+//     img{
+//       width: auto !important;
+//       height: auto !important;
+//     }
+//   }
+// }
+
+// .archive__title{
+//   h1{
+//     font-weight: normal;
+//     padding: 0;
+//     margin: 0 0 1em;
+//     border-bottom: 1px solid $border;
+//     padding-bottom: 1em;
+//     @include max-screen($breakpoint-tablet) {
+//       text-align: center;
+//     }
+//   }
+// }
+
+// .alert-warning{
+//   margin-bottom: 1em;
+// }

@@ -1,0 +1,260 @@
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+$font-family: 'Noto Sans CJK JP','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
+// Grid settings
+$main-md-columns:       12;
+$sidebar-md-columns:    4;
+
+// Breakpoint
+$width-max          : 1365px;
+$breakpoint-lg      : 1200px;
+$breakpoint-md      : 970px;
+$breakpoint-tablet  : 768px;
+$breakpoint-mobile  : 640px;
+
+// Alpha
+$alpha              : 0.8;
+$bd-radius          : 4px;
+
+// Colors
+$pure-white         : #ffffff;
+$pre-white          : #f4f4f4;
+$pre-white2         : #f2f2f2;
+$color-base         : #333333;
+$color-link         : #3eaadd;
+$color-hover        : #63c9f9;
+$color-grey         : #8da5b0;
+$color-dgrey        : #666666;
+$color-green        : #75c151;
+$color-dgreen       : #4cc75b;
+$color-blue         : #3eaadd;
+$color-dblue        : #1fa4e2;
+$color-dblue2       : #1d9bd6;
+$color-bder-grey    : #617e8c;
+$color-bder-grey2   : #698896;
+$color-bder-green   : #52a42c;
+$color-bder-blue    : #008cce;
+$color-bder-blue2    : #a1d3ea;
+$color-red          : #ed6366;
+$gnav-red           : #585858;
+$color-light-grey   : #cccccc;
+$color-light-grey2  : #777777;
+$color-light-grey3  : #aaaaaa;
+$color-light-grey4  : #999999;
+$color-light-grey5  : #eeeeee;
+$color-light-grey6  : #e6e6e6;
+$color-light-grey7  : #d7d7d7;
+$color-black-grey   : #444444;
+$color-hr           : #a1dcf6;
+
+
+
+// Colors
+$brand-primary:         #b74e5d;
+$link:                  #b74e5d;
+$red:                   #df262c;
+$gray:                  #717171;
+$border-pink:           #d9676b;
+$border:                #ececec;
+$white:                 #f6f6f6;
+$black:                 #1C2227;
+$type:                  #4a4a4a;
+$footer-type:           #bfbfbf;
+$facebook:              #4460a0;
+$twitter:               #00aaec;
+$google:                #f93f2d;
+$rss:                   #ff9a00;
+$pocket:                #ee4056;
+$hatena:                #5279e7;
+
+// Mixin Setting
+@mixin bder-radius($radi: $bd-radius){
+	border-radius:$radi;
+}
+
+// @mixin white-box {
+//   @include border-radius(8px);
+//   background-color: $pure-white;
+//   padding: 2.4em;
+//   overflow: hidden;
+//   margin-bottom: 2em;
+// }
+
+// @mixin white-box-sidebar {
+//   @include border-radius(8px);
+//   background-color: $pure-white;
+//   padding: 1.4em;
+//   overflow: hidden;
+//   margin-top: 2em;
+// }
+
+// @mixin btn {
+//   @include border-radius(8px);
+//   display: inline-block;
+//   background: $red;
+//   border:1px solid $red;
+//   color: $white;
+//   #{&}:hover{
+//     border:1px solid $red;
+//     color: $red;
+//     background: $white;
+//     text-decoration: none;
+//   }
+// }
+
+// @mixin transition($transition...) {
+//     -moz-transition:    $transition;
+//     -o-transition:      $transition;
+//     -webkit-transition: $transition;
+//     transition:         $transition;
+// }
+
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+// @mixin screen($break-point-min, $break-point-max) {
+//   @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+//     @content;
+//   }
+// }
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?8d1huu');
+  src:  url('../fonts/icomoon.eot?8d1huu#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.woff2?8d1huu') format('woff2'),
+    url('../fonts/icomoon.ttf?8d1huu') format('truetype'),
+    url('../fonts/icomoon.woff?8d1huu') format('woff'),
+    url('../fonts/icomoon.svg?8d1huu#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-about:before {
+  content: "\e900";
+}
+.icon-after:before {
+  content: "\e901";
+}
+.icon-counseling:before {
+  content: "\e902";
+}
+.icon-expert:before {
+  content: "\e903";
+}
+.icon-orien:before {
+  content: "\e904";
+}
+.icon-passport:before {
+  content: "\e905";
+}
+.icon-plus:before {
+  content: "\e906";
+}
+.icon-school:before {
+  content: "\e907";
+}
+.icon-skill:before {
+  content: "\e908";
+}
+.icon-step:before {
+  content: "\e909";
+}
+.icon-support:before {
+  content: "\e90a";
+}
+.icon-visa:before {
+  content: "\e90b";
+}
+.icon-wifi:before {
+  content: "\e90c";
+}
+.icon-work:before {
+  content: "\e90d";
+}
+.icon-air:before {
+  content: "\e90e";
+}
+.icon-school-counseling .path1:before {
+  content: "\e90f";
+  color: none;
+}
+.icon-school-counseling .path2:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(4, 0, 0);
+}
+.icon-school-counseling .path3:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(4, 0, 0);
+}
+.icon-school-counseling .path4:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(4, 0, 0);
+}
+.icon-school-counseling .path5:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
+}
+.icon-school-counseling .path6:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: none;
+}
+.icon-school-counseling .path7:before {
+  content: "\e915";
+  margin-left: -1em;
+  color: none;
+}
+.icon-school-counseling .path8:before {
+  content: "\e916";
+  margin-left: -1em;
+  color: rgb(4, 0, 0);
+}
+.icon-school-counseling .path9:before {
+  content: "\e917";
+  margin-left: -1em;
+  color: rgb(4, 0, 0);
+}
+.icon-school-apply:before {
+  content: "\e918";
+}
+.icon-bye:before {
+  content: "\e919";
+}
+.icon-air-pickup:before {
+  content: "\e91a";
+}
+.icon-homestay:before {
+  content: "\e91b";
+}
+
+
+

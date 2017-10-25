@@ -1,0 +1,252 @@
+
+/* --------------------------------- */
+/*  DOT背景画像
+------------------------------------ */
+.dot-bg{
+  background:url(../images/dot_bg_sp.png);
+  background-size:4px 4px;
+  @include max-screen($breakpoint-tablet) {
+    background-image:url(../images/dot_bg_sp.png);
+  }
+}
+
+/* --------------------------------- */
+/*  ワンカラムのよくあるレイアウトのやつ
+------------------------------------ */
+.col1-section{
+  margin-top:80px;
+  margin-bottom:80px;
+  @include max-screen($breakpoint-tablet) {
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+  h1{
+    font-size: 3.0rem;
+    text-align:center;
+    margin:0 0 60px;
+    @include max-screen($breakpoint-tablet) {
+      font-size: 2.0rem;
+      margin:0 0 30px;
+    }
+  }
+}
+
+/* --------------------------------- */
+/*  Flexレイアウト
+------------------------------------ */
+.row-flex{
+  display:flex;
+  align-items:center;
+  @include max-screen($breakpoint-tablet) {
+    flex-direction:column;
+    align-content:center;
+    flex-wrap:wrap;
+  }
+}
+.row-flex--spacebetween{
+  @extend .row-flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+.row-flex--start{
+  @extend .row-flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap:wrap;
+}
+
+/* --------------------------------- */
+/*  スマホだけ改行を削除
+------------------------------------ */
+.br-sp { 
+  @include max-screen($breakpoint-md) {
+    display:none;
+  }
+}
+
+/* --------------------------------- */
+/*  使い回せる「無料留学相談」領域
+------------------------------------ */
+.contact-area{
+  text-align:center;
+  h1{
+    margin:0 0 24px;
+  }
+  .contact-p{
+    margin:0 0 1.4em;
+  }
+  .btn--contact{
+    width:330px;
+    margin:0 auto;
+    a{
+      font-size:2.4rem;
+    }
+  }
+}
+
+/* --------------------------------- */
+/*  カード
+------------------------------------ */
+.card{
+	position:relative;
+	background:$pre-white;
+	border:$color-light-grey solid 1px;
+  text-align:center;
+	@include bder-radius;
+	width:31%;
+	margin:0 3.5% 3em 0;
+	padding:30px 0 80px;
+	&:nth-child(3n){
+		margin-right:0;
+	}
+  @include max-screen($breakpoint-tablet) {
+    width:100%;
+    margin:0 0 15px;
+    padding:20px 0 0;
+  }
+	.card-data{
+		padding:0 40px;
+    @include max-screen($breakpoint-tablet) {
+      padding:0 20px ;
+      margin-bottom:30px;
+    }
+    #{&}--underbtn{
+		 padding-bottom:60px;
+      @include max-screen($breakpoint-tablet) {
+        padding-bottom:0;
+      }
+    }
+	}
+	.card-data-title{
+		font-size: 2.4rem;
+		margin:0 0 18px;
+		line-height: 1.4;
+    	@include max-screen($breakpoint-tablet) {
+			font-size: 1.8rem;
+    	}
+	}
+	.card-data-txt{
+		line-height: 1.8;
+    text-align:left;
+	}
+	.card-data-icon{
+		margin:0 0 20px;
+		i{
+			color:$color-green;
+			font-size: 8.0rem;
+		}
+	}
+	.card-btn-detail{
+		position:absolute;
+		text-align:center;
+		bottom: 0;
+		width:100%;
+		border-top:$color-light-grey solid 1px;
+		a{
+			display:block;
+			padding:15px;
+			font-size: 1.8rem;
+			font-weight:normal;
+			&:hover{
+        		background:$color-light-grey5;
+			}
+		}
+  	@include max-screen($breakpoint-tablet) {
+		  position:relative;
+  		// margin:10px 0 0;
+  		// bottom:0;
+  	}
+	}
+  .card-extlinks{
+    position:absolute;
+    width:100%;
+    bottom:5%;
+    text-align:center;
+    padding:0;
+    display:flex;
+    justify-content: center;
+    @include max-screen($breakpoint-tablet) {
+      // bottom:3%;
+    }
+    li{
+      margin:0 6px;
+    }
+    a{
+      font-size:1.2rem;
+    }
+  }
+}
+
+.card--sup{
+  @extend .card;
+  padding:0;
+    @include max-screen($breakpoint-tablet) {
+      // padding:0 0 20px;
+    }
+    > a{
+      display:block;
+      height:100%;
+      color:inherit;
+      padding:0 0 40px;
+      &:hover{
+        background:$color-light-grey5;
+      }
+    }
+    .card-img{
+      position:relative;
+      overflow:hidden;
+      height:200px;
+      @include max-screen($breakpoint-lg) {
+        height:150px;
+      }
+      @include max-screen($breakpoint-tablet) {
+        height:110px;
+      }
+    }
+  .card-data-title{
+     margin-top:28px;
+  }
+}
+
+.card-list--blue{
+  .card-data-title{
+    color:$color-blue;
+  }
+  .card-data-icon{
+    i{
+      color:$color-blue;
+    }
+  }
+}
+.card--nowraplink{
+  @extend .card;
+  padding-bottom: 20px;
+  .card-extlinks{
+    position:relative;
+    margin-top:30px;
+  }
+}
+
+/* --------------------------------- */
+/*  画像角丸
+------------------------------------ */
+.imgr{
+  @include bder-radius;
+}
+
+/* --------------------------------- */
+/*  
+------------------------------------ */
+.voffset  { margin-top: 2px; }
+.voffset1 { margin-top: 5px; }
+.voffset2 { margin-top: 10px; }
+.voffset3 { margin-top: 15px; }
+.voffset4 { margin-top: 30px; }
+.voffset5 { margin-top: 40px; }
+.voffset6 { margin-top: 60px; }
+.voffset7 { margin-top: 80px; }
+.voffset8 { margin-top: 100px; }
+.voffset9 { margin-top: 150px; }
+
+
+

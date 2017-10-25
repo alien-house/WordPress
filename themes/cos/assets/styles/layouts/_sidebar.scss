@@ -1,0 +1,104 @@
+// .sidebar{
+//   .ads{
+//     text-align: center;
+//     letter-spacing: -.40em;
+//     img{
+//       letter-spacing: normal;
+//     }
+//   }
+//   .tabs{
+//     margin-top: 6%;
+//     #{&}__button{
+//       span{
+//         display: inline-block;
+//         padding: 0.8em 1.3em;
+//         color: $link;
+//         cursor:pointer;
+//         @include border-top-radius(5px);
+//         &:hover{
+//           background: $red;
+//           color: $white;
+//         }
+//         &.selected{
+//           background: $pure-white;
+//           color: $gray;
+//         }
+//       }
+//     }
+//     #{&}__content{
+//       background: $pure-white;
+//       border:1px solid $white;
+//       overflow: hidden;
+//       padding: 2em;
+//     }
+//     #{&}__listing{
+//       font-size: small;
+//       padding: 1em 0 0 0;
+//       @include max-screen($breakpoint-tablet) {
+//         font-size: medium;
+//         line-height: 1.8em;
+//       }
+//       ul{
+//         margin: -1em 0;
+//         padding: 1em;
+//         li{
+//           overflow: hidden;
+//           border-bottom: 1px solid $border;
+//           padding-bottom: 3%;
+//           margin-bottom: 4%;
+//           list-style: none;
+//           a{
+//             display: block;
+//             line-height: 1.7em;
+//           }
+//           p{
+//             overflow: hidden;
+//           }
+//           span.data{
+//             text-align: right;
+//             display: block;
+//           }
+//           span.pic{
+//             width:20%;
+//             overflow: hidden;
+//             float: left;
+//             margin-right: 4%;
+//             img{
+//               width: 100%;
+//               height: auto;
+//               @include border-radius(100px);
+//             }
+//           }
+//           a img.wpp-thumbnail{
+//             width: 20%;
+//             height: 20%;
+//             margin-right:4%;
+//             float: left;
+//             @include border-radius(100px);
+//             #{&}:hover{
+//               border: 3px solid $border;
+//               @include transition(border 0.1s ease);
+//             }
+//           }
+//           .wpp-views{
+//             text-align: right;
+//             display: block;
+//           }
+//           &:last-child{
+//             border: none;
+//           }
+//         }
+//       }
+//     }
+//     .hide{
+//       display: none;
+//     }
+//   }
+// }
+
+// .white-box-sidebar{
+//   @include white-box-sidebar;
+//   &:first-child{
+//     margin-top: 0;
+//   }
+// }

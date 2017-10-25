@@ -1,0 +1,105 @@
+// WordPress Generated Classes
+// http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+
+// Media alignment
+.alignnone {
+  margin-left: 0;
+  margin-right: 0;
+  max-width: 100%;
+  height: auto;
+}
+.aligncenter {
+  display: block;
+  margin: ($line-height-computed / 2) auto;
+  height: auto;
+}
+.aligncontainer {
+    overflow: hidden;
+    text-align: left;
+}
+.alignleft,
+.alignright {
+  margin-bottom: ($line-height-computed / 2);
+  height: auto;
+}
+@media (min-width: $screen-sm-min) {
+  // Only float if not on an extra small device
+  .alignleft {
+    float: left;
+    margin-right: ($line-height-computed);
+  }
+  .alignright {
+    float: right;
+    margin-left: ($line-height-computed);
+  }
+}
+
+// Captions
+.wp-caption {
+  @extend .thumbnail;
+}
+.wp-caption-text {
+  padding: $thumbnail-caption-padding;
+}
+
+// Text meant only for screen readers
+.screen-reader-text {
+  @extend .sr-only;
+  @extend .sr-only-focusable;
+}
+
+// Plugins
+
+.wp_rp_wrap{
+  margin: 4em 0;
+  .wp_rp_content{
+    width: 100%;
+    .related_post_title {
+      padding: 1em 2.4em;
+      margin-left:-2.4em;
+      margin-right:-2.4em;
+      margin-bottom: 1em;
+      background: $gray;
+      color: $white;
+      font-weight: normal;
+    }
+    ul.related_post {
+      padding: 0;
+      overflow: hidden;
+      margin-right: -2%;
+    }
+    ul.related_post li {
+      width: 23%;
+      margin: 0 2% 2% 0;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 1.3em;
+      @include max-screen($breakpoint-tablet) {
+        width: 48%;
+      }
+    }
+    ul.related_post li a {
+      font-size: small;
+      text-decoration: none;
+    }
+    ul.related_post li img {
+      width: 100%;
+      height: auto;
+      @include border-radius(8px);
+      margin-bottom: 0.6em;
+    }
+  }
+}
+
+.wp-pagenavi {
+    text-align: center;
+}
+
+.syntaxhighlighter {
+  .lines{
+    padding: 10px !important;
+    border: #d8d8d8 solid 1px !important;
+  }
+}
+
+
